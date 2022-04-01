@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.broll.godfight.game.GameEnvironment;
 import com.broll.godfight.physic.bodies.DynamicRectangle;
 import com.broll.godfight.physic.bodies.StaticRectangle;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class WoodDebry extends StageObject {
 
@@ -20,7 +20,7 @@ public class WoodDebry extends StageObject {
 		super(game);
 		float x = position.x - size.x / 2;
 		float y = position.y + size.y / 2;
-		body = new DynamicRectangle(new Vec4f(x, y, size.x, size.y), DENSITY, RESTITUTION, true);
+		body = new DynamicRectangle(new Vector4(x, y, size.x, size.y), DENSITY, RESTITUTION, true);
 		addBody(body);
 
 		sprite = new Sprite(game.getResource().getTexture("wood_plank.png"));

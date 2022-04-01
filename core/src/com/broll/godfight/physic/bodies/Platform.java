@@ -12,7 +12,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.broll.godfight.physic.CollisionFlag;
 import com.broll.godfight.physic.CollisionMasks;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class Platform extends PhysicBody {
 
@@ -57,12 +57,12 @@ public class Platform extends PhysicBody {
 	}
 
 	@Override
-	public Vec4f getBounds() {
+	public Vector4 getBounds() {
 		return getBounds(HEIGHT);
 	}
 
-	public Vec4f getBounds(float height) {
-		return new Vec4f(vec.x, vec.y, vec.x + vec.z, vec.y - height);
+	public Vector4 getBounds(float height) {
+		return new Vector4(vec.x, vec.y, vec.x + vec.z, vec.y - height);
 	}
 
 	@Override

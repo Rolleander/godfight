@@ -9,7 +9,7 @@ import com.broll.godfight.physic.BodyHitListener;
 import com.broll.godfight.physic.bodies.DamageSensor;
 import com.broll.godfight.physic.bodies.DynamicRectangle;
 import com.broll.godfight.physic.bodies.StaticRectangle;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class WoodBox extends StageObject {
 
@@ -23,7 +23,7 @@ public class WoodBox extends StageObject {
 
 	public WoodBox(GameEnvironment game, Vector2 location) {
 		super(game);
-		body = new DynamicRectangle(new Vec4f(location.x - SIZE / 2, location.y - SIZE / 2, SIZE, SIZE), DENSITY,
+		body = new DynamicRectangle(new Vector4(location.x - SIZE / 2, location.y - SIZE / 2, SIZE, SIZE), DENSITY,
 				RESTITUTION);
 		sprite = new Sprite(game.getResource().getTexture("box.jpg"));
 		sprite.setSize(SIZE, SIZE);

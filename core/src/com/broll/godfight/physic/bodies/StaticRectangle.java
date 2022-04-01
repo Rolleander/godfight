@@ -11,16 +11,16 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.broll.godfight.physic.CollisionFlag;
 import com.broll.godfight.physic.CollisionMasks;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class StaticRectangle extends PhysicBody {
 
-	protected Vec4f vec;
+	protected Vector4 vec;
 	private float friction=1;
 	protected float density=0;
 	protected float restitution=0;
 
-	public StaticRectangle(Vec4f vec){
+	public StaticRectangle(Vector4 vec){
 		this.vec=vec;
 		maskBits= CollisionMasks.getMask(CollisionFlag.STAGE);
 		categoryBits=CollisionFlag.STAGE.getGroup();
@@ -65,8 +65,8 @@ public class StaticRectangle extends PhysicBody {
 	}
 
 	@Override
-	public Vec4f getBounds() {
-		return new Vec4f(vec.x, vec.y, vec.x+vec.z, vec.y-vec.w);
+	public Vector4 getBounds() {
+		return new Vector4(vec.x, vec.y, vec.x+vec.z, vec.y-vec.w);
 	}
 	
 	@Override

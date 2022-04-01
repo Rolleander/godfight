@@ -7,14 +7,14 @@ import com.broll.godfight.game.GameEnvironment;
 import com.broll.godfight.game.fighter.Fighter;
 import com.broll.godfight.physic.GamePhysic;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Stage {
 	protected GameEnvironment game;
-	protected Vec4f bounds;
+	protected Vector4 bounds;
 	protected CameraController cameraController;
 	private List<PhysicBody> bodies = new ArrayList<PhysicBody>();
 	private Array<PolygonRender> renders = new Array<PolygonRender>();
@@ -73,9 +73,9 @@ public abstract class Stage {
 
 	protected PhysicBody addBody(PhysicBody body) {
 		bodies.add(body);
-		Vec4f bound = body.getBounds();
+		Vector4 bound = body.getBounds();
 		if (bounds == null) {
-			bounds = new Vec4f(bound);
+			bounds = new Vector4(bound);
 		} else {
 			bounds.x = Math.min(bounds.x, bound.x);
 			bounds.y = Math.max(bounds.y, bound.y);
@@ -91,7 +91,7 @@ public abstract class Stage {
 		}
 	}
 
-	public Vec4f getBounds() {
+	public Vector4 getBounds() {
 		return bounds;
 	}
 }

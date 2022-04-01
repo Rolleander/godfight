@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.broll.godfight.physic.CollisionFlag;
 import com.broll.godfight.physic.CollisionMasks;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class StaticCircle extends PhysicBody{
 
@@ -59,8 +59,8 @@ public class StaticCircle extends PhysicBody{
 	}
 
 	@Override
-	public Vec4f getBounds() {
-		return new Vec4f(position.x	, position.y, position.x+radius*2, position.y-radius*2);
+	public Vector4 getBounds() {
+		return new Vector4(position.x	, position.y, position.x+radius*2, position.y-radius*2);
 	}
 	
 	@Override

@@ -16,7 +16,7 @@ import com.broll.godfight.physic.bodies.Platform;
 import com.broll.godfight.physic.bodies.StaticRectangle;
 import com.broll.godfight.physic.bodies.StaticTriangle;
 import com.broll.godfight.resource.ResourceManager;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class TestStage extends Stage {
 
@@ -39,10 +39,10 @@ public class TestStage extends Stage {
 
 
 		
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 50; i++) {
 			game.getObjects().addObject(new WoodBox(game, new Vector2(5, 50+i)));
 		}
-		for (int i = 0; i < 15; i++) {
+		for (int i = 0; i < 35; i++) {
 			game.getObjects().addObject(new Football(game, new Vector2((float) (-5+Math.random()*20), 10+i)));
 		}
 		game.getObjects().addObject(new RotatingPost(game, new Vector2(5, 7), new Vector2(4,0.5f), new Vector2(7,0.25f)));
@@ -55,15 +55,15 @@ public class TestStage extends Stage {
 		MovingPlatform platform=new MovingPlatform(game, new Vector2(3, 2), 1,waypoints);
 		game.getObjects().addObject(platform);
 
-		addRender(addBody(new StaticRectangle(new Vec4f(-10, 3, 5, 2))), stone, 200);
+		addRender(addBody(new StaticRectangle(new Vector4(-10, 3, 5, 2))), stone, 200);
 
-		addRender(addBody(new StaticRectangle(new Vec4f(0, 0, 15, 5))), stone, 200);
-		addRender(addBody(new StaticTriangle(new Vec4f(-7, -1, 7, 3), true)), stone, 200);
-		addRender(addBody(new StaticTriangle(new Vec4f(-7, 10, 7, 6), false)), stone, 200);
-		addRender(addBody(new StaticTriangle(new Vec4f(17, 10, 7, 6), false)), stone, 200);
+		addRender(addBody(new StaticRectangle(new Vector4(0, 0, 15, 5))), stone, 200);
+		addRender(addBody(new StaticTriangle(new Vector4(-7, -1, 7, 3), true)), stone, 200);
+		addRender(addBody(new StaticTriangle(new Vector4(-7, 10, 7, 6), false)), stone, 200);
+		addRender(addBody(new StaticTriangle(new Vector4(17, 10, 7, 6), false)), stone, 200);
 
-		addRender(addBody(new StaticRectangle(new Vec4f(15, -3f, 10, 5))), stone, 200);
-		addRender(addBody(new StaticRectangle(new Vec4f(21.5f, 1, 2, 1f))), stone, 200);
+		addRender(addBody(new StaticRectangle(new Vector4(15, -3f, 10, 5))), stone, 200);
+		addRender(addBody(new StaticRectangle(new Vector4(21.5f, 1, 2, 1f))), stone, 200);
 
 		
 	

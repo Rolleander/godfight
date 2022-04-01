@@ -9,7 +9,7 @@ import com.broll.godfight.physic.bodies.DynamicRectangle;
 import com.broll.godfight.physic.bodies.KinematicRectangle;
 import com.broll.godfight.physic.bodies.StaticRectangle;
 import com.broll.godfight.resource.ResourceManager;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class RotatingPost extends StageObject {
 
@@ -22,8 +22,8 @@ public class RotatingPost extends StageObject {
 		super(game);
 		float x = position.x - armSize.x / 2;
 		float y = position.y + armSize.y / 2;
-		arm = new KinematicRectangle(new Vec4f(x, y, armSize.x, armSize.y));
-		platform = new DynamicRectangle(new Vec4f(0, 0, platformSize.x, platformSize.y), 150, 0.7f);
+		arm = new KinematicRectangle(new Vector4(x, y, armSize.x, armSize.y));
+		platform = new DynamicRectangle(new Vector4(0, 0, platformSize.x, platformSize.y), 150, 0.7f);
 		addBody(arm);
 		addBody(platform);
 		anchorPoint = -armSize.x / 2 + armSize.y / 2;

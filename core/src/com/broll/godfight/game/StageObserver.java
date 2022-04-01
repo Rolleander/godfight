@@ -2,22 +2,22 @@ package com.broll.godfight.game;
 
 import com.badlogic.gdx.math.Vector2;
 import com.broll.godfight.game.fighter.Fighter;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class StageObserver {
 
 	private GameEnvironment game;
 	private final static float HORIZONTAL_BORDER = 20;
 	private final static float VERTICAL_BORDER = 15;
-	private Vec4f mapBorder;
+	private Vector4 mapBorder;
 
 	public StageObserver(GameEnvironment game) {
 		this.game = game;
 	}
 
 	public void init() {
-		Vec4f bounds = game.getStage().getBounds();
-		mapBorder = new Vec4f(bounds.x - HORIZONTAL_BORDER, bounds.y + VERTICAL_BORDER, bounds.x + bounds.z
+		Vector4 bounds = game.getStage().getBounds();
+		mapBorder = new Vector4(bounds.x - HORIZONTAL_BORDER, bounds.y + VERTICAL_BORDER, bounds.x + bounds.z
 				+ HORIZONTAL_BORDER, bounds.y + bounds.w - VERTICAL_BORDER);
 	}
 

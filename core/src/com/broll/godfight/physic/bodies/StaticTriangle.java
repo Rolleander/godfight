@@ -10,15 +10,15 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.broll.godfight.physic.CollisionFlag;
 import com.broll.godfight.physic.CollisionMasks;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class StaticTriangle extends PhysicBody {
 
-	private Vec4f vec;
+	private Vector4 vec;
 	private boolean faceLeft;
 	private float friction=1f;
 	
-	public StaticTriangle(Vec4f vec, boolean faceLeft){
+	public StaticTriangle(Vector4 vec, boolean faceLeft){
 		this.vec=vec;
 		this.faceLeft=faceLeft;
 		maskBits= CollisionMasks.getMask(CollisionFlag.STAGE);
@@ -69,9 +69,8 @@ public class StaticTriangle extends PhysicBody {
 	}
 
 	@Override
-	public Vec4f getBounds() {
-		return new Vec4f(vec.x, vec.y, vec.x+vec.z, vec.y-vec.w);
-
+	public Vector4 getBounds() {
+		return new Vector4(vec.x, vec.y, vec.x+vec.z, vec.y-vec.w);
 	}
 	
 	@Override

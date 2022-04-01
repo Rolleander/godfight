@@ -5,7 +5,7 @@ import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.broll.godfight.physic.bodies.DamageSensor;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class CircleDamageSensor extends DamageSensor {
 
@@ -55,7 +55,7 @@ public class CircleDamageSensor extends DamageSensor {
 	}
 
 	@Override
-	public Vec4f getBounds() {
+	public Vector4 getBounds() {
 		return null;
 	}
 

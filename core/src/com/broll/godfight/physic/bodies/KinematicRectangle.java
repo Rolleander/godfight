@@ -2,11 +2,11 @@ package com.broll.godfight.physic.bodies;
 
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class KinematicRectangle extends StaticRectangle {
 
-	public KinematicRectangle(Vec4f vec) {
+	public KinematicRectangle(Vector4 vec) {
 		super(vec);	
 	}
 	

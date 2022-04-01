@@ -3,7 +3,7 @@ package com.broll.godfight.physic;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.broll.godfight.physic.bodies.DamageSensor;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public abstract class PhysicBody {
 
@@ -15,7 +15,7 @@ public abstract class PhysicBody {
 	
 	public abstract void init(Body body);
 	
-	public abstract Vec4f getBounds();
+	public abstract Vector4 getBounds();
 	
 	public void initBody(Body body){
 		this.body=body;

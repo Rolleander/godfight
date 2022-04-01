@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.EarClippingTriangulator;
 import com.broll.godfight.physic.PhysicBody;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class PolygonRender {
 
@@ -19,7 +19,7 @@ public class PolygonRender {
 		this(texture, body.getBounds(), body.getPolygonVertices(), textureSize);
 	}
 
-	public PolygonRender(Texture texture, Vec4f position, float[] vertices, float textureSize) {
+	public PolygonRender(Texture texture, Vector4 position, float[] vertices, float textureSize) {
 		float x = position.x;
 		float y = position.y;
 		for (int i = 0; i < vertices.length; i++) {

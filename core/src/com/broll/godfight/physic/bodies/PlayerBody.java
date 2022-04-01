@@ -15,7 +15,7 @@ import com.broll.godfight.physic.CollisionFlag;
 import com.broll.godfight.physic.CollisionMasks;
 import com.broll.godfight.physic.DynamicPhysicBody;
 import com.broll.godfight.physic.ObjectJumpListener;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class PlayerBody extends DynamicPhysicBody {
 
@@ -26,7 +26,7 @@ public class PlayerBody extends DynamicPhysicBody {
 
 	// in seconds
 	private final static float JUMP_DELAY = 0.3f;
-	private Vec4f pos;
+	private Vector4 pos;
 	private int footContacts;
 	private float jumpDelay;
 	private ObjectJumpListener jumpListener;
@@ -37,7 +37,7 @@ public class PlayerBody extends DynamicPhysicBody {
 
 	private Fighter fighter;
 
-	public PlayerBody(Fighter fighter, Vec4f pos) {
+	public PlayerBody(Fighter fighter, Vector4 pos) {
 		this.pos = pos;
 		this.fighter = fighter;
 	}
@@ -282,7 +282,7 @@ public class PlayerBody extends DynamicPhysicBody {
 	}
 
 	@Override
-	public Vec4f getBounds() {
+	public Vector4 getBounds() {
 		return null;
 	}
 

@@ -10,7 +10,7 @@ import com.broll.godfight.input.InputLayout;
 import com.broll.godfight.physic.bodies.PlayerBody;
 import com.broll.godfight.resource.FighterSprite;
 import com.broll.godfight.stage.StageLocation;
-import com.sun.javafx.geom.Vec4f;
+import com.broll.godfight.utils.Vector4;
 
 public class Fighter {
 
@@ -65,7 +65,7 @@ public class Fighter {
 		StageLocation spawn = game.getStage().getStartLocation(this);
 		if (playerBody == null) {
 			// create body at spawn position
-			playerBody = new PlayerBody(this, new Vec4f(spawn.getLocation().x, spawn.getLocation().y, data.getWidth(),
+			playerBody = new PlayerBody(this, new Vector4(spawn.getLocation().x, spawn.getLocation().y, data.getWidth(),
 					data.getHeight()));
 			game.getPhysic().addBody(playerBody);
 			movement.init();
